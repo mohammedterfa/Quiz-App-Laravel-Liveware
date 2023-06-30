@@ -29,13 +29,13 @@
 
     @if ($currentQuestionIndex < $this->questionsCount - 1)
     <div class="mt-4">
-        <x-secondary-button x-on:click="secondsLeft = {{ config('quiz.secondsPerQuestion') }}; $wire.changeQuestion();">
+        <x-secondary-button wire:click="changeQuestion">
             Next question
         </x-secondary-button>
     </div>
     @else
         <div class="mt-4">
-            <x-primary-button wire:click.prevent="submit">Submit</x-primary-button>
+            <x-primary-button wire:click="submit">Submit</x-primary-button>
         </div>
     @endif
 </div>
