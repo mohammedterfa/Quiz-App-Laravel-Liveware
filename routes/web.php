@@ -19,6 +19,7 @@ use App\Http\Livewire\Quiz\QuizList;
 |
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('quiz/{quiz}/{slug?}', [HomeController::class, 'show'])->name('quiz.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
