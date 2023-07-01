@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\TestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResultController;
@@ -40,6 +41,8 @@ Route::middleware('auth')->group(function () {
         Route::get('quizzes', QuizList::class)->name('quizzes');
         Route::get('quizzes/create', QuizForm::class)->name('quiz.create');
         Route::get('quizzes/{quiz}', QuizForm::class)->name('quiz.edit');
+
+        Route::get('tests', TestController::class)->name('tests');
     });
 
 
