@@ -27,6 +27,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - <img src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png" width="50">
 
 ## ScreenShots
-
+![screenshot](https://github.com/mohammedterfa/Quiz-App-Laravel-Liveware/blob/master/public/screenshots/Screenshot%20from%202023-07-01%2013-36-22.png?raw=true)
 
 
