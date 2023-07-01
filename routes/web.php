@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResultController;
+use App\Http\Livewire\Front\Leaderboard;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Questions\QuestionList;
 use App\Http\Livewire\Questions\QuestionForm;
@@ -22,6 +23,7 @@ use App\Http\Livewire\Quiz\QuizList;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('quiz/{quiz}/{slug?}', [HomeController::class, 'show'])->name('quiz.show');
 Route::get('results/{test}', [ResultController::class, 'show'])->name('results.show');
+Route::get('leaderboard', Leaderboard::class)->name('leaderboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
