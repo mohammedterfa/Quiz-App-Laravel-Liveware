@@ -35,4 +35,9 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    public function admin(): static
+    {
+        return $this->afterCreating(fn (User $user) => $user->update(['is_admin' => true]));
+    }
 }
